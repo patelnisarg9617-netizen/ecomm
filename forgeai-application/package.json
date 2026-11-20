@@ -1,0 +1,6 @@
+{
+  "name": "forgeai-backend",
+  "version": "1.0.0",
+  "scripts": { "dev": "ts-node src/server.ts", "build": "tsc" },
+  "dependencies": { "express": "^4.21.1", "cors": "^2.8.5", "helmet": "^8.0.0" }
+}

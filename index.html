@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS — Creative Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-mark">✧</span>
+        <span class="logo-text">NEXUS</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#portfolio">Works</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">✦ Available for Select Projects & Collaborations</span>
+      <h1 class="hero-title">Pure Sound. Zero Noise.</h1>
+      <p class="hero-subtitle">Precision-engineered audiophile grade wireless sound designed for those who refuse compromise.</p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn btn-primary">View Selected Works</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Works Section -->
+  <section id="portfolio" class="section">
+    <div class="section-header">
+      <h2 class="section-title">Selected Works</h2>
+      <p class="section-subtitle">A curated collection of recent visual design, photography, and creative projects</p>
+      <div class="filter-pills">
+        <button class="pill active" onclick="filterWorks('all', this)">All Projects</button>
+        <button class="pill" onclick="filterWorks('creative', this)">Creative Direction</button>
+        <button class="pill" onclick="filterWorks('visual', this)">Photography & Visual</button>
+        <button class="pill" onclick="filterWorks('digital', this)">Digital Experiences</button>
+      </div>
+    </div>
+
+    <div class="works-grid" id="worksGrid">
+      <div class="work-card" data-category="creative" onclick="openWorkModal('Minimalist Editorial Series', 'High-contrast studio shoot exploring editorial geometry and refined composition.', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80')">
+        <div class="work-media">
+          <img src="images/portfolio-1.jpg" alt="Editorial Creative Series" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'">
+          <span class="card-badge">Editorial</span>
+        </div>
+        <div class="work-body">
+          <span class="work-tag">Creative Direction · 2026</span>
+          <h3 class="work-title">Minimalist Editorial Series</h3>
+          <p class="work-desc">Editorial creative direction exploring high-fashion geometry and soft atmospheric lighting.</p>
+        </div>
+      </div>
+
+      <div class="work-card" data-category="visual" onclick="openWorkModal('Architectural Form Study', 'Documentary photography capturing modern brutalist architecture at dawn.', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80')">
+        <div class="work-media">
+          <img src="images/portfolio-2.jpg" alt="Modern architectural study" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'">
+          <span class="card-badge">Photography</span>
+        </div>
+        <div class="work-body">
+          <span class="work-tag">Visual Arts · 2026</span>
+          <h3 class="work-title">Architectural Form Study</h3>
+          <p class="work-desc">Documentary photography capturing modern brutalist forms and geometric reflection lines.</p>
+        </div>
+      </div>
+
+      <div class="work-card" data-category="digital" onclick="openWorkModal('Nebula Design System', 'A scalable multi-platform design system built for next-generation interfaces.', 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80')">
+        <div class="work-media">
+          <img src="images/portfolio-3.jpg" alt="Digital UI/UX experience" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80'">
+          <span class="card-badge">UI / UX</span>
+        </div>
+        <div class="work-body">
+          <span class="work-tag">Product Design · 2026</span>
+          <h3 class="work-title">Nebula Design System</h3>
+          <p class="work-desc">A scalable design language and component library for next-generation web applications.</p>
+        </div>
+      </div>
+
+      <div class="work-card" data-category="visual" onclick="openWorkModal('Kinetic Light & Motion', 'Experimental studio series manipulating neon refraction through prism lenses.', 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80')">
+        <div class="work-media">
+          <img src="images/portfolio-4.jpg" alt="Experimental lighting series" onerror="this.src='https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80'">
+          <span class="card-badge">Exhibition</span>
+        </div>
+        <div class="work-body">
+          <span class="work-tag">Experimental · 2026</span>
+          <h3 class="work-title">Kinetic Light & Motion</h3>
+          <p class="work-desc">Studio series exploring light refractions, long exposure trails, and chromatic dispersion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="about-grid">
+      <div class="about-media">
+        <img src="images/about.jpg" alt="Portrait" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80'">
+      </div>
+      <div class="about-content">
+        <span class="section-tag">About Me</span>
+        <h2 class="about-title">Crafting meaningful visual narratives through design & technology</h2>
+        <p class="about-desc">
+          I am a multidisciplinary creator passionate about merging aesthetic precision with functional digital experiences. With over 6 years of expertise collaborating with visionary brands, galleries, and founders worldwide.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">48+</span>
+            <span class="stat-label">Projects Shipped</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Capabilities Section -->
+  <section id="skills" class="section">
+    <div class="section-header">
+      <h2 class="section-title">Core Capabilities</h2>
+      <p class="section-subtitle">Specialized skills and creative disciplines honed across commercial and independent projects</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">✦</div>
+        <h3>Creative Direction</h3>
+        <p>Brand identity, visual concepts, art direction, and comprehensive style guides.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚡</div>
+        <h3>Digital Experiences</h3>
+        <p>Modern responsive web interfaces, rapid prototyping, and fluid micro-interactions.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📷</div>
+        <h3>Visual & Photography</h3>
+        <p>Commercial shoots, editorial portraiture, lighting design, and high-end retouching.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">◈</div>
+        <h3>Design Systems</h3>
+        <p>Scalable UI component libraries, accessibility compliance, and design token architecture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="contact-card">
+      <div class="section-header">
+        <h2 class="section-title">Let's Create Together</h2>
+        <p class="section-subtitle">Have a project in mind or want to collaborate? Send a note and let's bring it to life.</p>
+      </div>
+      <form class="contact-form" onsubmit="handleContactSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" required placeholder="Alex Turner" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" required placeholder="alex@domain.com" class="form-input">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Project Details</label>
+          <textarea rows="4" required placeholder="Tell me about your goals, timeline, and scope..." class="form-input"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Project Preview Modal -->
+  <div id="workModal" class="modal" onclick="closeWorkModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modalTitle">Project Title</h3>
+        <button class="close-btn" onclick="closeWorkModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Project Preview" class="modal-image">
+        <p id="modalDesc" class="modal-desc"></p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary btn-block" onclick="showToast('Inquiry noted for this project!'); closeWorkModal();">Inquire About Similar Work</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-mark">✧</span>
+        <span>NEXUS</span>
+      </div>
+      <p class="copyright">© 2026 NEXUS. Crafted with ForgeAI.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    function filterWorks(category, el) {
+      document.querySelectorAll('.filter-pills .pill').forEach(btn => btn.classList.remove('active'));
+      el.classList.add('active');
+      document.querySelectorAll('.work-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      showToast('Filtered: ' + el.textContent);
+    }
+
+    function openWorkModal(title, desc, img) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('workModal').classList.add('open');
+    }
+
+    function closeWorkModal() {
+      document.getElementById('workModal').classList.remove('open');
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      e.target.reset();
+      showToast('🎉 Thank you! Your message has been sent successfully.');
+    }
+  </script>
+</body>
+</html>

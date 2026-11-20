@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Create a complete, modern, responsive single-page static e-commerce we",
+    "prompt": "Create a complete, modern, responsive single-page static e-commerce website for \"NEXUS — Premium Wireless Audio & Smart Gear\" with an ultra-sleek dark tech aesthetic and 100% working interactive JavaScript for every button.\n\nREQUIREMENTS & FILE STRUCTURE:\n- Deliver a clean, self-contained \"index.html\" with linked \"styles.css\" and full vanilla JavaScript.\n- Do NOT use React, build tools, or placeholder links like \"href='#'\" or \"TODO\".\n\nVISUAL & MEDIA REQUIREMENTS:\n- Include relevant, high-quality images with descriptive alt text for:\n  - Hero banner showcasing premium wireless headphones with ambient neon lighting\n  - 6 distinct product cards (Over-ear ANC Headphones, True Wireless Earbuds, Studio Microphone, Bluetooth Speaker, Smartwatch, and Slim Mechanical Keyboard)\n  - Customer review avatar photos\n- All images must include rich, detailed alt descriptions and smooth hover zoom effects.\n\nEVERY BUTTON MUST HAVE REAL WORKING JAVASCRIPT LOGIC:\n\n1. Navigation Bar:\n   - Brand Logo: \"NEXUS\" with a glowing tech badge.\n   - Live Search Input: Typing filters the product grid in real time by title, category, and specs.\n   - Wishlist Icon: Displays a live counter badge of saved items.\n   - Cart Icon Button: Displays a dynamic item counter badge; clicking slides open the Cart Drawer.\n\n2. Hero Section:\n   - Headline: \"Pure Sound. Zero Noise.\"\n   - Subtitle: \"Precision-engineered audiophile grade wireless sound designed for those who refuse compromise.\"\n   - \"Shop Best Sellers\" button: Smoothly scrolls down to the product catalog.\n   - \"Watch Feature Demo\" button: Opens an interactive tech showcase modal.\n\n3. Interactive Category Filter Tabs:\n   - Filter buttons: \"All Products\", \"Headphones\", \"Earbuds\", \"Speakers\", \"Wearables\".\n   - Clicking immediately filters the displayed product cards with smooth transitions and updates the active tab styling.\n\n4. Product Grid (6 unique tech products):\n   - Each product card must display:\n     - Badge (\"Best Seller\", \"New Arrival\", or \"Sale -20%\").\n     - Product image with hover scaling.\n     - Star rating (e.g., ★★★★★ 4.9) and review count.\n     - Product title, key spec tags (e.g., \"40h Battery • ANC\"), and price.\n     - Wishlist Heart Button: Toggles heart color (red/white) and updates the navbar wishlist counter badge.\n     - Quick View Button: Opens a modal showing product photos, detailed technical specs, color options, and quantity selector.\n     - \"Add to Cart\" Button: Adds the item to the cart, increments the navbar badge counter, and triggers a floating Toast Notification.\n\n5. Functional Slide-Over Cart Drawer:\n   - Slides smoothly from the right when the cart icon is clicked.\n   - Renders cart items with thumbnail, title, price, quantity controls (+ / - buttons), and a trash/delete button.\n   - Dynamic price calculation: Subtotal, Free Shipping ($0.00), Estimated Tax (8%), and Grand Total.\n   - \"Proceed to Checkout\" button: Opens the Checkout Modal.\n   - Close Drawer button (X) and backdrop click dismissal.\n\n6. Interactive Checkout Modal:\n   - Form fields: Full Name, Email, Shipping Address, and Payment Method toggle (Credit Card / Apple Pay / Cash on Delivery).\n   - \"Complete Purchase\" button: Validates required inputs, shows a brief 1-second loading state, clears the cart, and displays an \"Order Confirmed! Order #NEX-7821\" celebration view with a receipt summary.\n\n7. Customer Testimonials & Newsletter:\n   - Testimonial cards featuring customer avatar photos and verified buyer badges.\n   - Newsletter signup with email validation: Clicking \"Subscribe\" shows an instant confirmation message (\"Welcome to NEXUS Insider VIP\").\n\n8. Floating Toast Notification System:\n   - Pops up in the bottom-right corner with feedback on user actions:\n     - \"Item added to cart!\"\n     - \"Wishlist updated!\"\n     - \"Order placed successfully!\"\n\nDESIGN & PALETTE:\n- Premium Cyberpunk / Modern Dark Mode:\n  - Deep carbon background (#0b0f19, #111827).\n  - Electric blue and violet neon accents (#38bdf8, #818cf8).\n  - Glassmorphic frosted cards (backdrop-filter: blur(12px), subtle border rgba(255,255,255,0.08)).\n  - Clean Inter/system-ui typography with polished micro-interactions.",
+    "model": "openai/gpt-oss-20b",
+    "stack": "html",
+    "status": "completed",
+    "files": [
+      "index.html",
+      "styles.css",
+      "script.js",
+      "images/hero-banner.jpg",
+      "images/product-1.jpg",
+      "images/product-2.jpg",
+      "images/product-3.jpg",
+      "images/product-4.jpg",
+      "images/product-5.jpg",
+      "images/product-6.jpg",
+      "images/avatar-1.jpg",
+      "images/avatar-2.jpg",
+      "images/avatar-3.jpg"
+    ],
+    "id": "fda4ab7a-6be3-4a8e-850b-615391349510",
+    "createdAt": "2026-11-20T06:12:33.566Z"
+  }
+]
